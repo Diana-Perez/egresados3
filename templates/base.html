@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <title>{% block title %}e-CINVESTAV{% endblock %}</title>
+  {% endblock %}
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,700'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,700'><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="static/css/style.css"/> 
+ </head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-dark bg-dark" style="background-color: #26a69a;">
+  <div class="container-fluid">
+    <div class="navbar-header"> 
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">CINVESTAV</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('faqs') }}" class="color-me"><span class="glyphicon glyphicon-question-sign"></span> FAQs</a></li>
+        <li><a href="#" class="color-me"><span class="glyphicon glyphicon-search"></span> Consultas</a></li>
+        <li><a href="{{ url_for('estadisticas1') }}" class="color-me"><span class="glyphicon glyphicon-stats"></span> Estadisticas</a></li>
+        <li class="active" style="background-color: #009688;"><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
